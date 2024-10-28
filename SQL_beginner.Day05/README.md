@@ -30,8 +30,8 @@
 7. [Exercise 06](https://github.com/Shyrasya/SQL-Bootcamp/tree/main/SQL_beginner.Day05/src/ex06) - создание уникального индекса BTree с именем "idx_1", который улучшает метрику "время выполнения" SQL-запроса:
 	```
 	SELECT
-			m.pizza_name AS pizza_name,
-			max(rating) OVER (PARTITION BY rating ORDER BY rating ROWS BETWEEN UNBOUNDED PRECEDING AND UNBOUNDED FOLLOWING) AS k
+		m.pizza_name AS pizza_name,
+		max(rating) OVER (PARTITION BY rating ORDER BY rating ROWS BETWEEN UNBOUNDED PRECEDING AND UNBOUNDED FOLLOWING) AS k
 	FROM  menu m
 	INNER JOIN pizzeria pz ON m.pizzeria_id = pz.id
 	ORDER BY 1,2;
